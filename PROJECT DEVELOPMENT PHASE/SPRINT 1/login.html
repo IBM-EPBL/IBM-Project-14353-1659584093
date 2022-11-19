@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--  <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="shortcuts" type="img/png" href="img/favicon.png">
+    <title>HEALTH | PREVENTION IS BETTER THAN CURE</title>
+</head>
+<style>
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+    
+    html {
+        font-size: 62.5%;
+    }
+    
+    body {
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        /*font-size: 18px;*/
+        line-height: 1.8;
+        color: rgb(4, 48, 48);
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        height: 95vh;
+        background-image: linear-gradient( to right bottom, rgba(172, 9, 187, 0.822), rgba(71, 50, 146, 0.829), blue), url(../static/backgr.jpg);
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+    }
+    
+    .header__logo-box {
+        font-size: 3.5rem;
+        line-height: 3.8;
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    .header__logo {
+        height: 3.6rem;
+    }
+    
+    .header__heading {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .heading-primary {
+        color: ghostwhite;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 6rem;
+    }
+    
+    .heading-primary--main {
+        display: block;
+        font-size: 7rem;
+        font-weight: 700;
+        letter-spacing: 3.5rem;
+        text-align: center;
+        animation-name: moveinleft;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+    }
+    
+    .heading-primary--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 1.7rem;
+        animation-name: moveinright;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+    }
+    
+    @keyframes moveinleft {
+        0% {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
+        80% {
+            transform: translateX(2rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    @keyframes moveinright {
+        0% {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+        80% {
+            transform: translateX(-2rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    @keyframes moveinbottom {
+        0% {
+            opacity: 0;
+            transform: translateY(3rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    .btn:link,
+    .btn :visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    
+    .btn:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgb(0, 0, 0, .2);
+    }
+    
+    .btn:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2);
+    }
+    
+    .btn--white {
+        background-color: whitesmoke;
+        color: grey;
+    }
+    
+    .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    .btn--white::after {
+        background-color: white;
+    }
+    
+    .btn:hover::after {
+        transform: scaleX(1.5) scaleY(1.6);
+        opacity: 0;
+    }
+    
+    .btn--animated {
+        animation: moveinbottom 3s .75s;
+        animation-fill-mode: backwards;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- <div class="header__logo-box">
+            <img src="/img/logo.png" alt="png" class="logo">
+        </div> -->
+        <div class="header__heading">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main"> CHRONIC </span>
+                <span class="heading-primary--sub">KIDNEY DISEASE PREDICATION </span>
+            </h1>
+            <a href="http://127.0.0.1:5000/" class="btn btn--white btn--animated">CLICK TO CHECK</a>
+        </div>
+    </header>
+</body>
+
+</html>
